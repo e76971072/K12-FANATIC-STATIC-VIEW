@@ -1,0 +1,214 @@
+
+
+body {
+    
+    background-color:rgb(246, 246, 246); 
+}
+.top-bar{
+    width:  auto; 
+    height: 40px; 
+    float: right;
+    background: lightgrey; 
+    padding: 10px; 
+    margin: 40px; 
+    border-radius: 1rem; 
+   
+}
+.option{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    float: left;
+}
+.option h1 {
+    font-size: 12px; 
+}
+
+.a:hover  {
+    text-decoration: underline; 
+ 
+}
+.b:hover  {
+    text-decoration: underline; 
+}
+.c:hover  {
+    text-decoration: underline; 
+}
+
+/* search bar */ 
+.top2-layout-row {
+    width: auto;
+    height: auto; 
+    position: relative;  
+    transform: translate(20%,170px); 
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;     
+   
+}
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+    .top2-bar {
+        background-color: lightgrey; 
+    }
+
+
+/*********Drop down highschool content *******/
+.highschool button {
+    background-color: transparent; 
+    border: none; 
+    font-family: 'Times New Roman', Times, serif; 
+
+}
+.high-img {
+    width: 30px; 
+    height: 30px; 
+}
+.display-content-highschool {
+    display: none; 
+    position: absolute; 
+    transform: translate(-60px, 40px);
+  
+}
+.display-content-highschool table tr td {
+    font-size: 11px; 
+}
+.highschool:hover .display-content-highschool {
+    display: inline;
+}
+.highschool:hover button {
+    background-color: black; 
+    color: white;
+    border-radius: 1rem; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+.display-content-college {
+
+    display: none; 
+}
+
+/********************* Top3-layout **********/
+.top3-layout-row {
+      position: relative;
+      transform: translateX(30%); 
+}
+
+/*********Drop Down college contents ******/
+.college:hover .display-content-college {
+    display: inline; 
+}
+.college button{
+    background-color: transparent; 
+    border: none; 
+    font-family: 'Times New Roman', Times, serif; 
+}
+.college:hover button {
+    background-color: black; 
+    color: white;
+    border-radius: 1rem; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+.display-content-college {
+    display: none; 
+    transform: translate(-60px, 40px); 
+}
+
+
+/*************** Top4-layout ********/ 
+
+.top4-layout {
+    float: center; 
+    transform: translateY(20%); 
+    position:relative;
+}
+/*************** Deck Card Bootstrap *********/
+
+
+.card {
+    margin: 15px; 
+    border-radius: 1rem; 
+}
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+/********* Menu bar for Shipping, Size, ..... *****/ 
+
+.shipping-container {
+ margin-left: 40px; 
+ position:absolute; 
+ margin-top: 45vh; 
+
+ 
+}
+.shipping-container button {
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 4px solid lightgray;
+    position: relative; 
+    width: 150px; 
+    display: block; 
+}
+.display-content-shipping {
+    padding: 20px; 
+    display: none; 
+}
+
+
+/************* Product *********/ 
+
+.top4-layout {
+    float: right;
+    margin: 50px; 
+}
+.content-display-product {
+    text-align: center; 
+    position:relative;
+    transform: translate(20%); 
+}
+.content-display-product li {
+    display: inline; 
+    float: left;
+}
+.gender {
+    display: none; 
+    padding: 20px; 
+}
