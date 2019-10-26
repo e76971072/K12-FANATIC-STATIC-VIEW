@@ -9,11 +9,11 @@
 
 /*****Top Section ******/
 
-/* * {
+* {
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
-  } */
+  }
 .Motivation {
     text-align: center;
     height: 10%;
@@ -161,12 +161,11 @@ ul li {
     top: 20%;
     left: 14%;
 }
-
 .img-left {
    top: 10%;
    animation-duration: 4s;
    animation-fill-mode: forwards;
-   animation-name: slide-to-left;
+   /* animation-name: slide-to-left; */
 }
 .characters span {
         font: 40px Monaco, MonoSpace;
@@ -184,7 +183,7 @@ ul li {
    left: 14%;
    visibility: hidden;
    animation-duration: 4s;
-   animation-name: displaying-jersey-number; 
+   animation: 4s linear,4s displaying-jersey-number;
    animation-fill-mode: forwards;
 }
 .char1 {
@@ -209,10 +208,18 @@ ul li {
 }
 
 /********** Front - Jersey ******/ 
-.front-jersey {
-    
-  
-    animation: appear;
+.front-jersey-container {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    top: 10%;
+    right: 50%;
+    /* animation: appear; */
+}
+.front-jersey-container img {
+    width: 40%;
+    height: 50%;
 }
 @keyframes appear {
     0% {

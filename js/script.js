@@ -1,4 +1,4 @@
-import CircleType from `circletype`;
+
 $(document).ready(function() {
     //$('.Highschool').click(HighschoolFunction); 
     $('.name-jersey').arctext({radius:135});
