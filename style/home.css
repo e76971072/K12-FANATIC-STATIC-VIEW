@@ -24,14 +24,15 @@
     width:  100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.Motivation h2 {
+#label {
     color: white;
     font-size:  4rem;
     font-family: 'Arvo', serif;
-    left: 45%;
-    top: 10%;
+    left: 42%;
+    top: 2%;
     height: auto;
     width: auto;
+    position: fixed;
 }
 .Motivation h3 {
     color:  white;
