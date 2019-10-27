@@ -14,8 +14,10 @@
     color: #0f0 !important;
     outline: solid #f00 1px !important;
   } */
+.top-section { 
+    background-color: rgb(253, 131, 8);
+}
 .Motivation {
-    text-align: center;
     height: 10%;
 }
 .Motivation img {
@@ -55,19 +57,42 @@
     color: black;
     background-color: white;
 }
-ul {
-    position: absolute;
-    top: 60%;
-    left: -1%;
+/******* Nav bar ********/ 
+.nav-bar {
+    background-color: transparent;   
+    width: 100%;
+    margin-top: 2vh;
 }
-ul li {
-    display: inline-flex;
+.nav-bar li {
+    margin: 1rem; 
+    color: lightcyan;
+    width: 3rem;
+}
+.nav-bar li:hover {
+    text-decoration: underline;
+}
+/********* Social media ********/ 
+.social-media {
+    position: absolute;
+    width: 25%;
+    height: 10%;
+    text-align: center;
+    transform: translateX(142%);
+    bottom: 30%;
+    overflow: hidden; 
+}
+.social-media li {
+    margin: 2rem;
+}
+.social-media li img {
+    width: 2rem;
 }
 
 /**************Middle Section **********/
 
 .middle-section {
     width: 100%;
+    position: absolute;
 }
 .product-shop-now {
      margin-top: 5%; 
@@ -87,9 +112,18 @@ ul li {
     bottom: 80%;
     left: 33%;
 }
+.item1 h2 {
+    color: white;
+    display: none;
+    position: absolute;
+    font-family: 'Cedarville Cursive', cursive;
+    transform: translate(30%,-340%);
+}
+.item1:hover h2 {
+    display: block;
+}
 .item1:hover button{
     display: block;
-
     left: 40%;
 }
 .item1 img {
@@ -102,6 +136,18 @@ ul li {
 .item1:hover img {
     opacity: 0.8;
     transform: scale(1.05);
+}
+
+/********** item2 *********/ 
+.item2 h2 {
+    color: white;
+    position: absolute;
+    display: none;
+    font-family: 'Cedarville Cursive', cursive;
+    transform: translate(70%,-1050%);
+}
+.item2:hover h2 {
+    display: block;
 }
 .item2 {
     margin-left:5%;
@@ -142,30 +188,21 @@ ul li {
     position: absolute;
     min-width: 100%;
     overflow: hidden;
-    transform: translateY(80%); 
+    transform: translateY(200%); 
 }
  .img-left img{
     width: 40%;
     height: 50%;
-    animation: 4s linear, 4s rotation-of-jersey 4s linear;   
-}
-.number-jersey {
-    visibility: hidden;
-    color: white;
-    position: absolute;
-    font-family: 'Oswald', sans-serif;
-    font-size: 14rem;
-    animation-name: displaying-jersey-number;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    top: 20%;
-    left: 14%;
 }
 .img-left {
    top: 10%;
-   animation-duration: 4s;
-   animation-fill-mode: forwards;
-   /* animation-name: slide-to-left; */
+}
+
+.add-animation {
+    animation:slide-to-left 4s linear infinite;
+}
+.add-animation1 {
+    animation:displaying-jersey-number 4s linear infinite;
 }
 .characters span {
         font: 40px Monaco, MonoSpace;
@@ -182,9 +219,6 @@ ul li {
    top: 12%;
    left: 14%;
    visibility: hidden;
-   animation-duration: 4s;
-   animation: 4s linear,4s displaying-jersey-number;
-   animation-fill-mode: forwards;
 }
 .char1 {
  transform: rotate(3deg);
@@ -206,6 +240,17 @@ ul li {
 .char6{
     transform: rotate(48deg);
 }
+/******* Jersey Number ********/ 
+
+.number-jersey {
+    visibility: hidden;
+    color: white;
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14rem;
+    top: 20%;
+    left: 14%;
+}
 
 /********** Front - Jersey ******/ 
 .front-jersey-container {
@@ -220,6 +265,136 @@ ul li {
 .front-jersey-container img {
     width: 40%;
     height: 50%;
+}
+
+/******** Build your own section *********/ 
+.build-your-own {
+    min-width: 80vh;
+    min-height: 50vh;
+    position: absolute;
+    top: 280%;
+    background-color: white;
+    right: 2%;
+  
+    /* background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);    */
+}   
+.build-your-own h1 {
+    color: black;
+}
+.teams {
+    margin-left: 10%;
+    margin: 0px;
+    margin-top: 5%;
+    background-color: rgb(182, 177, 177);
+    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+}
+.top-img {
+    border-radius: 1rem;
+    position: absolute;
+    width: 30em;
+    height: 20em;
+}
+.top-img img {
+    width: 30em;
+    height: 20em;
+    border-radius: 2rem;
+}
+.build {
+    position: absolute;
+    right: 2%;
+    top: 60%;
+}
+.build button {
+    border: 1px solid white;
+    background-color: blue;
+    color: white;
+    height: 7vh;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    /* background-color: #FFE53B;
+    /* background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);    
+    box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4); */ 
+}
+.description {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 5%;
+    top: 30%;
+}
+.description li {
+    margin-left: 2%;
+    width: 10rem;
+    color: gray;  
+    font-family: 'Arvo', serif;
+}
+
+/******** Changing color *******/ 
+
+.changing-color {
+    position: absolute;
+    width: 100%; 
+    text-align: center;
+    top: 400%;
+}
+.container-img img {
+    width: 50em;
+    height: 60em;
+
+}
+
+/*************** Type Writter *********/ 
+
+#letter {
+    display: inline-block;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 700;
+    border-right: 4px solid orange;
+    box-sizing: border-box;
+    font-family: 'Arvo', serif;
+}
+.type-writer {
+    animation: typing 5s steps(30,end), blink .75s step-end infinite;
+}
+
+/********* Bottom Section ***********/ 
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    transform: translateY(1300%);
+    text-align: center;
+    background-color: lightgray; 
+}
+.bottom ul li {
+    margin: 2rem;
+    width:20rem;
+}
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
 }
 @keyframes appear {
     0% {
@@ -257,7 +432,7 @@ ul li {
 }
 @keyframes slide-to-left {
     
-   to { transform: translateX(30%);}
+   to { transform: translateX(5%);}
 }
 @keyframes transitioning2 {
     to { transform: translateX(-460%);}

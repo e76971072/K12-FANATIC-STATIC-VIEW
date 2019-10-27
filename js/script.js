@@ -1,41 +1,53 @@
 
-$(document).ready(function() {
-    //$('.Highschool').click(HighschoolFunction); 
-    $('.name-jersey').arctext({radius:135});
-}); 
 
+    
+// $(document).on("scroll", function () {
+//     if (isScrolledIntoView($elem, $window)) {
+//     $('.img-left').addClass ('add-animation');
+//     console.log("now you see me");
+//     }
+// });
 
-function HighschoolFunction (){
-    var arrayImg = ["cedar_park.png"
-                    ,"glen.png"
-                    ,"lion.png"
-                    ,"rouse.png"
-                    ,"vipers.png"
-                    ,"vista-ridge.png"];
-    $.each (arrayImg, function (index, value){
-        
-    })
+$(document).on("scroll", function () {
+        if ( isScrolledIntoView()){
+            var $elem = $("#img-left"); 
+            $elem.addClass("add-animation");
+            $(".characters > span").addClass("add-animation1");
+            $(".number-jersey").addClass("add-animation1");
+        }
+        if (isScrolledIntoViewWriting()){
+            var $elem1 = $("#letter"); 
+            $elem1.addClass("type-writer");
+        }
+        if (isScrolledIntoViewWriting() == false){
+            var $elem1 = $("#letter"); 
+            $elem1.removeClass("type-writer");
+        }
+    }); 
+function isScrolledIntoView() {
+        var $window = $(window);
+        var $elem = $("#img-left")
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+        return ( docViewBottom >= elemTop && docViewBottom <= elemBottom);
 }
-
-function displayShippingContainer (){
-   var toggleName = document.getElementById("shipping-01");
-   if ( toggleName.style.display === "none"){
-    toggleName.style.display = "block"; 
-   }
-   else{
-       toggleName.style.display = "none"; 
-   }
-  
-
+function isScrolledOutView() {
+    var $window = $(window);
+    var $elem = $("#img-left")
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+    return ((elemBottom >docViewBottom) && (elemTop < docViewTop));
 }
-function displayShippingContainer2 (){
-    var toggleName = document.getElementById("gender");
-    if ( toggleName.style.display === "none"){
-     toggleName.style.display = "block"; 
-    }
-    else{
-        toggleName.style.display = "none"; 
-    }
-   
- 
- }
+function isScrolledIntoViewWriting (){
+    var $window = $(window);
+        var $elem = $("#changing-color"); 
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+        return ( docViewTop >= elemTop);
+}

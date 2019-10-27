@@ -12,8 +12,7 @@
   <!--
       Bootstrap Import 
   -->
-  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  <!--
@@ -27,10 +26,25 @@
     <div class="root">
         <div class="top-section">
             <div class="Motivation">
+                        <ul class="nav-bar">
+                                <li>
+                                      About
+                                </li>
+                                <li>
+                                        <i class="fas fa-cart-plus">(0)</i>
+                                     
+                                </li>
+                                <li>
+                                                Login
+                                </li>
+                                <li>
+                                                Search
+                                </li>
+                        </ul>
                       <h2> K12 Fanatics</h2>
                       </br>
                       <h3> The easiest way to outfit a single team or entire organization. </h3>
-                      <ul>
+                      <ul class="social-media">
                         <li>
                             <img src="../img/social-media/instagram.png" alt="">
                         </li>
@@ -50,38 +64,105 @@
                       <div class="item1">
                         <img src="../img/background/john-arano.jpg" alt="">
                          <button> SHOP NOW </button>
+                          <h2> Do you have what it takes ? </h2>
                       </div>
                       <div class="item2">
                           <img src="../img/background/braden-collum.jpg" alt="">
                            <button> SHOP NOW </button>
+                           <h2> Be Your Own Boss</h2>
                         </div>
                 </div>
          </div>
          <div class="show-case-customize">
-            <div class="img-left">
+            <div id="img-left"class="img-left" tabindex="44">
               <img class="back-jersey"src="../img/sports/man-u.jpg" alt="">
               <h1 class="number-jersey"> 10</h1>
-              <div class="front-jersey-container">
+              <!-- <div class="front-jersey-container">
                 <img class="front-jersey"src="../img/sports/front-jersey.webp" alt="">
-              </div>
-              <div class="characters">
-                    <span class="char1">C</span>
-                    <span class="char2">H</span>
-                    <span class="char3">U</span>
-                    <span class="char4">O</span>
-                    <span class="char5">N</span>
-                    <span class="char6">G</span>
+              </div> -->
+              <div id="characters" class="characters">
+                    <span class="char1">R</span>
+                    <span class="char2">0</span>
+                    <span class="char3">0</span>
+                    <span class="char4">N</span>
+                    <span class="char5">E</span>
+                    <span class="char6">Y</span>
                 </div>
              </div>
-             <!-- <div class="img-right">
-                 <i class="fab fa-twitter"></i>
-             </div> -->
-        </div>
-         <div class="bottom-section">
-
-         </div>
+            <!-- Button trigger modal -->
     </div>
-  <script src="../js/script.js"></script>
+    <div class="build-your-own">
+                <div class="teams">
+                                <div class="top-img">
+                                        <img src="../img/sports/Houston-vfc.jpg" alt="">
+                                </div>
+                                <div class="description">
+                                        <li>
+                                                Easy
+                                        <li>
+                                        Fast
+                                        </li>
+                                        <li>
+                                        Get you oging
+                                        </li>
+                                </div>
+                                <div class="build">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Customize your team </button>
+                                        <div class="modal fade" id="myModal" role="dialog">
+                                                        <div class="modal-dialog">
+                                                        
+                                                          <!-- Modal content-->
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                              </div>
+                                                            <div class="modal-body">
+                                                             
+                                                                <img class="img-responsive" style="margin:0 auto;" src="http://placehold.it/260x340" alt="">
+                                                                       
+                                                            </div>
+                                                            
+                                                          </div>
+                                                          
+                                                        </div>
+                                                      </div>
+                                </div>
+                        </div>
+       </div>
 
+       <div id="changing-color"class="changing-color">
+                <div class="container-img">
+                         <img src="../img/products/shoes/Cleats-legend.png" alt="">
+                         <script>
+                                var flag = false;
+                                        setInterval(function() {
+                                                flag = !flag;
+                                                $("#changing-color").css("background", flag ? "#F62459" : "#5B3256");
+                                        }, 1000);
+                         </script>
+                         <h1 id="letter">
+                               K-12 FANATICS
+                         </h1>
+               </div>
+        </div>
+        <div class="bottom">
+              <ul>
+                      <li>
+                              Privacy
+                      </li>
+                      <li>
+                              License
+                      </li>
+                      <li>
+                              Designed by @ Kevin Nguyen
+                      </li>
+                      <li>
+                               All Right Reserved
+                        </li>
+              </ul>
+
+        </div>
+</div>
+  <script src="../js/script.js"></script>
 </body>
 </html>
