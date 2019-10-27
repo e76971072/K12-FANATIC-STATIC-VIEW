@@ -21,12 +21,12 @@ $(document).on("scroll", function () {
             var $elem1 = $("#letter"); 
             $elem1.addClass("type-writer");
         }
-        // if (isScrolledIntoViewWriting() == false){
-        //     var $elem1 = $("#letter"); 
-        //     var $right = $("#front-jersey-container"); 
-        //     $elem1.removeClass("type-writer");
-        //     $right.removeClass("add-animation2");
-        // }
+        if (isScrolledIntoViewWriting() == false){
+            var $elem1 = $("#letter"); 
+            var $right = $("#front-jersey-container"); 
+            $elem1.removeClass("type-writer");
+            $right.removeClass("add-animation2");
+        }
     }); 
 function isScrolledIntoView() {
         var $window = $(window);
