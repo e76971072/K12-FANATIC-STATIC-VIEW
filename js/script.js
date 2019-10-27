@@ -11,7 +11,9 @@
 $(document).on("scroll", function () {
         if ( isScrolledIntoView()){
             var $elem = $("#img-left"); 
+            var $right = $("#front-jersey-container"); 
             $elem.addClass("add-animation");
+            $right.addClass("add-animation2");
             $(".characters > span").addClass("add-animation1");
             $(".number-jersey").addClass("add-animation1");
         }
@@ -19,10 +21,12 @@ $(document).on("scroll", function () {
             var $elem1 = $("#letter"); 
             $elem1.addClass("type-writer");
         }
-        if (isScrolledIntoViewWriting() == false){
-            var $elem1 = $("#letter"); 
-            $elem1.removeClass("type-writer");
-        }
+        // if (isScrolledIntoViewWriting() == false){
+        //     var $elem1 = $("#letter"); 
+        //     var $right = $("#front-jersey-container"); 
+        //     $elem1.removeClass("type-writer");
+        //     $right.removeClass("add-animation2");
+        // }
     }); 
 function isScrolledIntoView() {
         var $window = $(window);
@@ -31,7 +35,7 @@ function isScrolledIntoView() {
         var docViewBottom = docViewTop + $window.height();
         var elemTop = $elem.offset().top;
         var elemBottom = elemTop + $elem.height();
-        return ( docViewBottom >= elemTop && docViewBottom <= elemBottom);
+        return ( docViewBottom >= elemTop );
 }
 function isScrolledOutView() {
     var $window = $(window);
